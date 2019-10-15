@@ -5,6 +5,7 @@ import {AuthenticationRoutingModule} from './authentication-routing.module';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
 import {AuthenticationService} from '../service/authentication.service';
+import {UserService} from '../service/user.service';
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent],
@@ -13,7 +14,8 @@ import {AuthenticationService} from '../service/authentication.service';
     AuthenticationRoutingModule
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    UserService
   ]
 })
 export class AuthenticationModule {
